@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LilianaCuenca.Registro">
+    
+    <ContentPage.Content>
+       
+            <Grid Margin="10,40,10,0" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="60"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Column="0"
+                   Grid.Row="0"
+                   Text="Ingrese su nombre:"
+                   HorizontalOptions="StartAndExpand"
+                   VerticalOptions="Center"
+                   FontSize="16"
+                   />
+                <Entry x:Name="txtNombre"
+                   Grid.Column="1"
+                   Grid.Row="0"
+                   Keyboard="Text"
+                   />
+
+                <Label Grid.Column="0"
+                  Grid.Row="1"
+                   Text="Ingrese la cuota inicial:"
+                   HorizontalOptions="StartAndExpand"
+                   VerticalOptions="Center"
+                   FontSize="16"
+                   />
+                <Entry x:Name="txtMonto"
+                   Grid.Column="1"
+                   Grid.Row="1"
+                   Keyboard="Numeric"/>
+
+                <Label Grid.Column="0"
+                  Grid.Row="2"
+                   Text="Pago mensual"
+                   HorizontalOptions="StartAndExpand"
+                   VerticalOptions="Center"
+                   FontSize="16"
+                   />
+                <Entry x:Name="txtPago"
+                   Grid.Column="1"
+                   Grid.Row="2"
+                   />
+
+                <Button x:Name="btnCalcular"
+                    Grid.Column="0"
+                    Grid.Row="3"
+                    Text="Calcular"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Clicked="btnCalcular_Clicked"
+                    />
+                <Button x:Name="btnGuardar"
+                    Text="Guardar"
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Clicked="btnGuardar_Clicked"
+                    />
+
+
+            </Grid>
+    </ContentPage.Content>
+</ContentPage>
